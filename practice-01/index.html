@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <button class="show-button" id="show-button">Заполнить форму</button>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <form class="form">
+          <label class="form-field">
+            <p>
+              <span class="form-field__asterisk">✱</span> Название организации
+            </p>
+            <input
+              class="form-field__input text-base"
+              type="text"
+              name="company"
+            />
+          </label>
+          <label class="form-field">
+            <p><span class="form-field__asterisk">✱</span> Телефон</p>
+            <input
+              class="form-field__input text-base"
+              type="tel"
+              name="phone"
+            />
+          </label>
+          <label class="form-field">
+            <p><span class="form-field__asterisk">✱</span> E-mail</p>
+            <input
+              class="form-field__input text-base"
+              type="email"
+              name="email"
+            />
+          </label>
+          <label class="form-field">
+            <p><span class="form-field__asterisk">✱</span> Направление</p>
+            <select
+              class="form-field__input form-field__input_select text-base"
+              name="direction"
+            >
+              <option value="ecology">Экология</option>
+              <option value="chemistry">Химия</option>
+              <option value="physics">Физика</option>
+              <option value="geography">География</option>
+            </select>
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
