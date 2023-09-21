@@ -14,6 +14,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 .text-small {
@@ -32,6 +33,18 @@
   line-height: 24px;
 }
 
+.show-button {
+  display: block;
+  padding: 10px 20px;
+  background-color: var(--submit-button-color);
+  border: none;
+  border-radius: 12px;
+  width: 240px;
+  margin: 20px auto;
+  cursor: pointer;
+  color: var(--text-additional-color);
+}
+
 .modal {
   display: none;
   position: absolute;
@@ -42,10 +55,6 @@
   height: 100vh;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal_show {
-  display: block;
 }
 
 .modal-content {
@@ -72,6 +81,74 @@
   column-gap: 32px;
 }
 
+.form-logo {
+  grid-column: 3/4;
+  grid-row: 1/4;
+  min-width: 0;
+}
+
+.form-logo__text {
+  color: var(--text-secondary-color);
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.form-logo__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.form-logo__label {
+  margin-top: 12px;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  background-image: url("images/logo-default.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.form-logo__label-text {
+  opacity: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18.667px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--text-additional-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  text-decoration: underline;
+  padding-inline: 40px;
+  cursor: pointer;
+}
+
+.form-logo__label:hover > .form-logo__label-text {
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.form-logo__error {
+  color: red;
+  text-align: center;
+  display: none;
+}
+
 .form-field {
   padding: 8px 16px;
   color: var(--text-secondary-color);
@@ -93,7 +170,6 @@
   color: var(--text-primary-color);
   width: 100%;
   border: none;
-  outline: none;
 }
 
 .form-field + .form-field:not(:nth-child(2)) {
@@ -119,7 +195,7 @@
   right: 16px;
 }
 
-.form-field__asterisk {
+.asterisk {
   color: var(--text-warning-color);
 }
 
@@ -136,6 +212,7 @@
   margin-top: 50px;
   border-radius: 6px;
   cursor: pointer;
+  width: 100%;
 }
 
 .cancel-button {
@@ -143,6 +220,11 @@
   width: fit-content;
   background-color: transparent;
   border: none;
+  display: block;
   margin: 15px auto 0;
   cursor: pointer;
+}
+
+.block-error {
+  border: 1px solid red;
 }
