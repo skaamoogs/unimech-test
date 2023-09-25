@@ -30,9 +30,7 @@
                 form="partner-form"
               />
             </label>
-            <p class="form-logo__error text-base" id="logo-error">
-              Добавьте логотип
-            </p>
+            <p class="form-logo__error text-base">Добавьте логотип</p>
           </div>
           <label class="form-field text-small">
             <p><span class="asterisk">✱</span> Название организации</p>
@@ -43,7 +41,7 @@
               required
             />
           </label>
-          <label class="form-field text-small">
+          <label class="form-field text-small" id="phone-label">
             <p><span class="asterisk">✱</span> Телефон</p>
             <input
               class="form-field__input text-base"
@@ -51,6 +49,9 @@
               name="phone"
               required
             />
+            <p class="form-field__input-error text-small" id="phone-error">
+              Номер телефона должен состоять из 10-15 цифр
+            </p>
           </label>
           <label class="form-field text-small">
             <p><span class="asterisk">✱</span> E-mail</p>

@@ -59,6 +59,7 @@
 
 .modal-content {
   padding: 50px 100px;
+  min-width: 280px;
   max-width: 754px;
   border-radius: 12px;
   background: #fff;
@@ -109,7 +110,7 @@
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 100%;
-  background-image: url("images/logo-default.png");
+  background-color: #ddd;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -160,6 +161,7 @@
   position: relative;
   justify-content: center;
   grid-column: 1 / 4;
+  position: relative;
 }
 
 .form-field:nth-child(-n + 4) {
@@ -170,6 +172,13 @@
   color: var(--text-primary-color);
   width: 100%;
   border: none;
+}
+
+.form-field__input-error {
+  color: red;
+  display: none;
+  position: absolute;
+  top: 56px;
 }
 
 .form-field + .form-field:not(:nth-child(2)) {
@@ -227,4 +236,23 @@
 
 .block-error {
   border: 1px solid red;
+}
+
+@media screen and (width < 750px) {
+  .modal-content {
+    padding-inline: 20px;
+    margin: 0;
+    border-radius: 0;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .form-logo {
+    width: 200px;
+    margin-bottom: 32px;
+    align-self: center;
+  }
 }
