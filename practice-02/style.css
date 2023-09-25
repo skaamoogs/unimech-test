@@ -1,0 +1,13 @@
+.table,
+.table__th,
+.table__td {
+  border: 1px solid;
+}
+
+.table {
+  width: 100%;
+}
+
+.table__thead {
+  background-color: #ddd;
+}

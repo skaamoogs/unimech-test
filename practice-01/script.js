@@ -25,7 +25,7 @@ showButton.addEventListener("click", () => showElement(modalWindow));
 cancelButton.addEventListener("click", () => hideElement(modalWindow));
 form.addEventListener("submit", handleSubmitForm);
 logoInput.addEventListener("change", clearLogoError);
-phoneInput.addEventListener("focus", clearPhoneError);
+phoneInput.addEventListener("input", clearPhoneError);
 
 // Functions
 
@@ -55,6 +55,8 @@ function handleSubmitForm(e) {
     return;
   }
   console.log(formJson);
+  alert("Форма отправлена!");
+  hideElement(modalWindow);
 }
 
 function showLogoError() {
@@ -69,15 +71,12 @@ function clearLogoError() {
 }
 
 function showPhoneError() {
-  console.log("phone error");
   showElement(phoneError);
   phoneLabel.classList.add("block-error");
   modalWindow.scrollTop = 0;
 }
 
 function clearPhoneError() {
-  console.log("clear phone error");
-
   hideElement(phoneError);
   phoneLabel.classList.remove("block-error");
 }
