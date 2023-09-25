@@ -7,4 +7,8 @@ const getPosts = async () => {
   }
 };
 
-const tbody = document.getElementById("tbody");
+const table = document.getElementById("table");
+const tbody = document.createElement("tbody");
+getPosts.then((data) => {
+  data.forEach((post) => {});
+});
